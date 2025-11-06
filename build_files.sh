@@ -1,19 +1,18 @@
-#!/bin/bash
+﻿#!/bin/bash
 set -e
-
-# Print python version for logs
+echo "Python version:"
 python --version
 
-# Upgrade pip
+# Make sure pip is up to date
 python -m pip install --upgrade pip
 
-# Install dependencies
+# Install python dependencies from requirements.txt
 pip install -r requirements.txt
 
-# Collect static files
+# Collect static files into staticfiles/ (used by vercel.json)
 python manage.py collectstatic --noinput
 
-# Try to run migrations if DB is configured (won't break build if DB missing)
+# Try to run migrations, but don't fail the build if DB isn't configured
 python manage.py migrate --noinput || true
 
 echo "Build finished"
