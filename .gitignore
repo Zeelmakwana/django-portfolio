@@ -1,0 +1,28 @@
+cd "E:\my projects\myportfolio"
+
+@"
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Django / local files
+db.sqlite3
+/staticfiles/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Environment files
+.env
+"@ | Out-File -FilePath .gitignore -Encoding utf8 -Force
+
