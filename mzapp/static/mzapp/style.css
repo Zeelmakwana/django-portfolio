@@ -502,3 +502,104 @@ a.cert-link { text-decoration: none; color: inherit; }
     to { transform: translateX(0); opacity: 1; }
 }
 
+
+
+/* ===============================
+   FINAL MOBILE POLISHING FIXES
+   =============================== */
+
+/* 1) Make all skill cards uniform height and aligned */
+.skills-grid {
+  justify-items: center;
+  align-items: stretch; /* all cards same height */
+}
+
+.skill-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  height: 130px !important; /* fixed height for uniform look */
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* adjust smaller screens */
+@media (max-width: 480px) {
+  .skill-card {
+    height: 115px !important; /* slightly smaller */
+  }
+}
+
+/* 2) Reduce excessive spacing between sections */
+section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* but keep a bit more padding on desktop */
+@media (min-width: 992px) {
+  section {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
+
+/* 3) Specifically tighten the gap between skills and projects */
+#skills {
+  margin-bottom: 1rem !important;
+}
+#projects {
+  margin-top: 1rem !important;
+}
+
+/* 4) Tighten the contact area spacing */
+#contact {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.contact-info {
+  margin-bottom: 1rem !important;
+  gap: 0.4rem 1rem !important;
+}
+
+.contact-form {
+  gap: 1rem !important;
+}
+
+/* 5) Ensure consistent text sizing inside skill cards */
+.skill-card span {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: var(--text-color) !important;
+  line-height: 1.2 !important;
+}
+
+/* Optional: slightly reduce section titles for mobile */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* ===============================
+   MOBILE CONTACT INFO STACK FIX
+   =============================== */
+@media (max-width: 768px) {
+  .contact-info {
+    display: flex !important;
+    flex-direction: column !important;  /* Stack vertically */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .contact-info p {
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0.2rem 0 !important;
+  }
+}
