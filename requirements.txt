@@ -15,4 +15,4 @@ This project is hosted on PythonAnywhere.
 - HTML, CSS, JavaScript
 
 ## Live Demo
-https://<yourusername>.pythonanywhere.com/
+https://ZeelMakwana.pythonanywhere.com/
